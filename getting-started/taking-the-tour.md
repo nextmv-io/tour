@@ -45,16 +45,16 @@ tour$ cat << EOF > ehlo/main.go
 package main
 
 import (
-	"fmt"
+    "fmt"
 
-	"github.com/nextmv-io/sdk"
-	"github.com/nextmv-io/sdk/store"
+    "github.com/nextmv-io/sdk"
+    "github.com/nextmv-io/sdk/store"
 )
 
 func main() {
-	s := store.New()
-	version := store.NewVar(s, sdk.VERSION)
-	fmt.Println("Hello Hop", version.Get(s))
+    s := store.New()
+    version := store.NewVar(s, sdk.VERSION)
+    fmt.Println("Hello Hop", version.Get(s))
 }
 EOF
 ```
