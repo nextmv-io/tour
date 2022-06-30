@@ -50,10 +50,6 @@ Let's see how.
 
 ## Building Models
 
-- Generating Stores
-- Returning Data
-- Discarding Stores
-
-## Putting it All Together
-
-- A Sudoku Solver
+- [Input and Output](building-models/input-and-output.md)
+- [Searching](building-models/searching.md)
+- [Sudoku](building-models/sudoku.md)
