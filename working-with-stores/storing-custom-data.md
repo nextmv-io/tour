@@ -43,7 +43,7 @@ pass it to `fmt.Println`.
 fmt.Println(peter.Get(s))
 ```
 
-Run the [source][source] above with `-trimpath` and you should see an 
+Run the [source][source] above with `-trimpath` and you should see an
 educational message about this Peter Rabbit fellow.
 
 ## Exercises

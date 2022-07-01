@@ -23,7 +23,7 @@ go version go1.18.3 darwin/amd64
 
 You also need the following shared object files for your architecture and
 operating system from Nextmv. If not already installed, follow the instructions
-[here](https://docs.nextmv.io/cli/installation) to install and configure 
+[here](https://docs.nextmv.io/cli/installation) to install and configure
 Nextmv's cli tool. Once you have successfully configured your api key, run
 `nextmv sdk get` to download the shared object files to `~/.nextmv/lib`. Add a
 `NEXTMV_LIBRARY_PATH` environment variable pointing to them. Your setup should

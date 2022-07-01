@@ -47,7 +47,7 @@ fmt.Println(
 
 Let's put this together and try it. Save the [full source][source] to a file
 called `main.go` inside its own directory under `tour/`. For example,
-`working-with-stores/create-stores/main.go` works nicely. Run it using
+`working-with-stores/creating-stores/main.go` works nicely. Run it using
 `go run -trimpath`. You should see output like this.
 
 ```bash
