@@ -52,8 +52,8 @@ s3 := s2.Apply(
 
 ## Exercises
 
-* Try to guess what `s1`, `s2`, and `s3` contain. Run the [source][source] and
-  see if you are right.
+* Try to guess what `s1`, `s2`, and `s3` contain. Run the [source][source] with
+  `-trimpath` and see if you are right.
 * Create a slice of a user-defined type. Insert values into it and retrieve the
   underlying slice contents.
 * Use the `Len` and `Get` methods to iterate over a slice and print its values

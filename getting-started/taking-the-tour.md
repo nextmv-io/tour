@@ -41,7 +41,7 @@ require github.com/nextmv-io/sdk v0.16.0-dev.0-3 // indirect
 Now we can create a test file that prints the SDK's version.
 
 ```bash
-tour$ cat << EOF > ehlo/main.go
+tour$ mkdir ehlo && cat << EOF > ehlo/main.go
 package main
 
 import (

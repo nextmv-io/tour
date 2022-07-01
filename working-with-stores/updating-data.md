@@ -47,7 +47,8 @@ fmt.Println("s1:", x.Get(s1), y.Get(s1))
 fmt.Println("s2:", x.Get(s2), y.Get(s2), pi.Get(s2))
 ```
 
-Run the [source][source] above and you should see output similar to this.
+Run the [source][source] above with `-trimpath` and you should see output
+similar to this.
 
 ```txt
 s1: 42 foo

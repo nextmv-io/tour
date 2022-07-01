@@ -38,8 +38,8 @@ Let's see how.
 ## Working with Stores
 
 - [Creating Stores](working-with-stores/creating-stores.md)
-- [Storing Custom Data](working-with-stores/storing-custom-data.md)
 - [Updating Data](working-with-stores/updating-data.md)
+- [Storing Custom Data](working-with-stores/storing-custom-data.md)
 - [Formatting Stores](working-with-stores/formatting-stores.md)
 
 ## Working with Collections
