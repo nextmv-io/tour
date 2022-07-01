@@ -46,9 +46,10 @@ Let's run this [empty model][source] and pipe the output into [`jq`][jq].
 echo 42 | go run -trimpath building-models/input-and-output/main.go | jq
 ```
 
-You should see output similar to the following. It hows how Hop was configured,
-statistics about its search, and so on. The `store` field is `null` because our
-model doesn't do anything, but that will change in the next sections.
+You should see output similar to the following. It shows information about Hop's
+configuration, statistics about its search, and so on. The `store` field is
+`null` because our model doesn't do anything, but that will change in the
+next sections.
 
 ```json
 {
