@@ -54,7 +54,7 @@ next sections.
 ```json
 {
   "version": {
-    "sdk": "v0.16.0-dev.0-3"
+    "sdk": "v0.16.0-dev.0-4"
   },
   "options": {
     "diagram": {

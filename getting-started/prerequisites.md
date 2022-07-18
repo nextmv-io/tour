@@ -34,9 +34,9 @@ $ nextmv sdk get
 successfully installed sdk files
 
 $ ls ~/.nextmv/lib
-nextmv-run-cli-v0.16.0-dev.0-3-go1.18.3-darwin-amd64.so        
-nextmv-sdk-v0.16.0-dev.0-3-go1.18.3-darwin-amd64.so
-nextmv-run-http-v0.16.0-dev.0-3-go1.18.3-darwin-amd64.so
+nextmv-run-cli-v0.16.0-dev.0-4-go1.18.3-darwin-amd64.so        
+nextmv-sdk-v0.16.0-dev.0-4-go1.18.3-darwin-amd64.so
+nextmv-run-http-v0.16.0-dev.0-4-go1.18.3-darwin-amd64.so
 
 $ export NEXTMV_LIBRARY_PATH=~/.nextmv/lib
 
