@@ -23,8 +23,8 @@ go: creating new go.mod: module tour
 Now we add Nextmv's SDK to our dependencies.
 
 ```bash
-tour$ go get github.com/nextmv-io/sdk@v0.16.0-dev.0-4
-go: added github.com/nextmv-io/sdk v0.16.0-dev.0-4
+tour$ go get github.com/nextmv-io/sdk@v0.16.0-dev.0-5
+go: added github.com/nextmv-io/sdk v0.16.0-dev.0-5
 ```
 
 You should now have a `go.mod` file that looks like this.
@@ -35,7 +35,7 @@ module tour
 
 go 1.18
 
-require github.com/nextmv-io/sdk v0.16.0-dev.0-4 // indirect
+require github.com/nextmv-io/sdk v0.16.0-dev.0-5 // indirect
 ```
 
 Now we can create a test file that prints the SDK's version.
@@ -63,8 +63,8 @@ We can run it using `go run`.
 
 ```bash
 tour$ go run -trimpath ehlo/main.go
-go: downloading github.com/nextmv-io/sdk v0.16.0-dev.0-4
-Hello Hop v0.16.0-dev.0-4
+go: downloading github.com/nextmv-io/sdk v0.16.0-dev.0-5
+Hello Hop v0.16.0-dev.0-5
 ```
 
 If you see see output like the above, you're ready to get hopping! Each of the
