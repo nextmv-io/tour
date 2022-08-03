@@ -1,18 +1,18 @@
 # ![ears](../img/ears.png) Domains
 
-Domains are a special type in Hop. A domain stores integers which typically
-represent potential choices. For example, a domain may represent the hours a
-shift might start or the destinations a traveler could arrive at.
+Domains are a special type. A domain stores integers which typically represent
+potential choices. For example, a domain may represent the hours a shift might
+start or the destinations a traveler could arrive at.
 
 Structurally, a domain is an ordered, compact, set of integers. Domains maintain
 a minimal representation of ranges as we apply operators to them to create new
 ones. They are also, conveniently, immutable.
 
-Hop provides two domain types: `model.Domain` and `store.Domain`. `model.Domain`
-is just an integer domain, unattached to a store. `store.Domain` has many of the
-same methods but with similar mechanics to `store.Slice` and `store.Map`. Thus
-`model.Domain` is the underlying type for `store.Domain`, which must be
-associated with a store.
+Nextmv's SDK provides two domain types: `model.Domain` and `store.Domain`.
+`model.Domain` is just an integer domain, unattached to a store. `store.Domain`
+has many of the same methods but with similar mechanics to `store.Slice` and
+`store.Map`. Thus `model.Domain` is the underlying type for `store.Domain`,
+which must be associated with a store.
 
 Let's create a few domains to see how they work.
 
@@ -79,7 +79,8 @@ The change set above results in the following domains.
 
 There are many methods available on domains. Some allow us to modify them, while
 others help us select an individual domain from a collection of them. Take a
-look at the Go package documentation to see what domains have to offer.
+look at the Go package documentation to see what domains have to offer. Run the
+[source][source] to get the outputs described here.
 
 ## Exercises
 
@@ -91,4 +92,11 @@ look at the Go package documentation to see what domains have to offer.
 * Create a collection of domains each containing more than one value. Remove
   values from the domains until calling `Singleton` returns true.
 
+---
+
+[Previous][previous] | [Next][next] | [Home][home]
+
+[previous]: ./maps.md
+[next]: ../building-models/input-and-output.md
+[home]: ../README.md
 [source]: domains/main.go

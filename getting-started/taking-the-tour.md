@@ -1,11 +1,16 @@
 # ![ears](../img/ears.png) Taking the Tour
 
 To take this tour, you can either `git clone git@github.com:nextmv-io/tour.git`
-pr create a new module and start from scratch. Either way will work, but the
-following instructions assume you are starting from scratch. This way so you get
+or create a new module and start from scratch. Either way will work, but the
+following instructions assume you are starting from scratch. This is so you get
 used to building models the right way. If you'd prefer to skip some steps and
-clone the tour instead, you should be able to follow along and `go run` any of
-the `main.go` files included in the source tree.
+clone the tour instead, you should be able to follow along and `nextmv sdk run`
+any of the `main.go` files included in the source tree.
+
+You have the following resources available to you:
+
+- [Nextmv SDK source](https://github.com/nextmv-io/sdk)
+- [Nextmv SDK docs](https://pkg.go.dev/github.com/nextmv-io/sdk)
 
 Any decision model built on Nextmv's SDK requires a [a Go module][modules]. A
 module manages your dependencies, including the Nextmv SDK. Let's create one
@@ -23,8 +28,8 @@ go: creating new go.mod: module tour
 Now we add Nextmv's SDK to our dependencies.
 
 ```bash
-tour$ go get github.com/nextmv-io/sdk@v0.16.0-dev.0-4
-go: added github.com/nextmv-io/sdk v0.16.0-dev.0-4
+tour$ go get github.com/nextmv-io/sdk
+go: added github.com/nextmv-io/sdk vX.Y.Z
 ```
 
 You should now have a `go.mod` file that looks like this.
@@ -35,7 +40,7 @@ module tour
 
 go 1.18
 
-require github.com/nextmv-io/sdk v0.16.0-dev.0-4 // indirect
+require github.com/nextmv-io/sdk vX.Y.Z // indirect
 ```
 
 Now we can create a test file that prints the SDK's version.
@@ -59,17 +64,24 @@ func main() {
 EOF
 ```
 
-We can run it using `go run`.
+We can run it using `nextmv sdk run`.
 
 ```bash
-tour$ go run -trimpath ehlo/main.go
-go: downloading github.com/nextmv-io/sdk v0.16.0-dev.0-4
-Hello Hop v0.16.0-dev.0-4
+tour$ nextmv sdk run ehlo/main.go
+go: downloading github.com/nextmv-io/sdk vX.Y.Z
+Hello Hop vX.Y.Z
 ```
 
 If you see see output like the above, you're ready to get hopping! Each of the
-examples in this tour constitutes a complete `main.go` Put them in unique
-directories  inside your `tour` folder and run them using the same `go run`
-command shown above.
+examples in this tour constitutes a complete `main.go`. Put them in unique
+directories inside your `tour` folder and run them using the same `nextmv sdk
+run` command shown above.
 
+---
+
+[Previous][previous] | [Next][next] | [Home][home]
+
+[previous]: ./prerequisites.md
+[next]: ../working-with-stores/creating-stores.md
+[home]: ../README.md
 [modules]: https://go.dev/blog/using-go-modules

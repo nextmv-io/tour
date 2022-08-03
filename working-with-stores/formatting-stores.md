@@ -1,9 +1,9 @@
 # ![ears](../img/ears.png) Formatting Stores
 
-Hop was designed to work well with JSON data. This makes it easy to deploy Hop
-models into microservices, run them as serverless functions, and many other
-things. A store can be directly encoded into JSON as a representation of its
-variable assignments.
+The store was designed to work well with JSON data. This makes it easy to
+deploy models into microservices, run them as serverless functions, and
+many other things. A store can be directly encoded into JSON as a
+representation of its variable assignments.
 
 Let's create a new store and encode it into JSON.
 
@@ -52,9 +52,9 @@ in order of declaration.
 This may be fine, or we may rather reshape the format into something more
 convenient. Let's turn that JSON list into a map with the variable names. To do
 this, we use the `Format` method. `Format` is similar to `Apply`, in that it
-doesn't change the existing store, but applies a change to create a new one. The
-difference is that now we are adding _logic_ to the store instead of a change
-to a variable assignment. Hop stores give us very specific ways to introduce
+doesn't change the existing store, but applies a change to create a new one.
+The difference is that now we are adding _logic_ to the store instead of a
+change to a variable assignment. Stores give us very specific ways to introduce
 logic.
 
 ```go
@@ -70,7 +70,7 @@ enc.Encode(s)
 
 Now we should see our store encoded as a map. This isn't that far from where we
 started, but is more useful! Since `Format` can reshape a store into anything
-that can be encoded in JSON, its easy to make Hop output match anything we
+that can be encoded in JSON, its easy to make the output match anything we
 might expect in a production environment.
 
 ```json
@@ -100,12 +100,19 @@ Note how the new store inherits our formatting logic.
 
 ## Exercises
 
-* Start with the [example above][source] and reshape the output into something
+* Start with the [source above][source] and reshape the output into something
   more complex than a map. Can you format it as a map of maps or as a
   user-defined structure? How do the rules of the [`encoding/json`][json]
   library apply to the output?
 * What happens if you override the formatting logic of a child store? Does that
   impact the parent or any sibling stores?
 
+---
+
+[Previous][previous] | [Next][next] | [Home][home]
+
+[previous]: ./storing-custom-data.md
+[next]: ../working-with-collections/slices.md
+[home]: ../README.md
 [json]:   https://pkg.go.dev/encoding/json
 [source]: formatting-stores/main.go

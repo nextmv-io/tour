@@ -8,8 +8,8 @@ is unsurprising.
 
 It gets a little hairier when assigning a pointer type like a slice or a map to
 a variable. The pointer value is copied, but not the data it refers to. While
-Hop doesn't keep you from storing pointers, it's usually not what you want.
-Instead, Hop provides immutable containers so you can update rich data
+the store doesn't keep you from storing pointers, it's usually not what you
+want. Instead, it provides immutable containers so you can update rich data
 structures in a safe and efficient manner in your model.
 
 The simplest of these container types is an immutable slice. We can store a
@@ -20,10 +20,10 @@ s1 := store.New()
 x := store.NewSlice(s1, "c", "d", "e") // []string{"c", "d", "e"}
 ```
 
-We can assign any type to the slice. In this case, Hop infers that we are
+We can assign any type to the slice. In this case, the store infers that we are
 storing a slice of strings with initial value `["c", "d", "e"]` from the
-parameters. If we want to create an empty slice, Hop needs to know what type we
-intend to store.
+parameters. If we want to create an empty slice, the store needs to know the
+type.
 
 ```go
 x := store.NewSlice[string](s1) // []string{}
@@ -52,12 +52,19 @@ s3 := s2.Apply(
 
 ## Exercises
 
-* Try to guess what `s1`, `s2`, and `s3` contain. Run the [source][source] with
-  `-trimpath` and see if you are right.
+* Try to guess what `s1`, `s2`, and `s3` contain. Run the [source][source] and
+  see if you are right.
 * Create a slice of a user-defined type. Insert values into it and retrieve the
   underlying slice contents.
 * Use the `Len` and `Get` methods to iterate over a slice and print its values
   one at a time.
 
+---
+
+[Previous][previous] | [Next][next] | [Home][home]
+
+[previous]: ../working-with-stores/formatting-stores.md
+[next]: ./maps.md
+[home]: ../README.md
 [source]: slices/main.go
 [value]: https://go.dev/doc/faq#pass_by_value

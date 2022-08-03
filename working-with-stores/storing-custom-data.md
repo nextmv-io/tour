@@ -1,7 +1,7 @@
 # ![ears](../img/ears.png) Storing Custom Data
 
-A Hop store can manage any concrete type, including custom structs. Let's define
-a `bunny` type with a few fields and a `String` method.
+A store can manage any concrete type, including custom structs. Let's define a
+`bunny` type with a few fields and a `String` method.
 
 ```go
 type bunny struct {
@@ -34,7 +34,7 @@ peter := store.NewVar(s, bunny{
 })
 ```
 
-If we retrieve the value of `peter` from our store and print it, we should get a
+If we retrieve the value of `peter` from our store and print it, we should get
 the results of the `bunny.String` method. Note that `peter.Get` returns a value
 of type `bunny`, so Go knows to call the appropriate `String` method when we
 pass it to `fmt.Println`.
@@ -43,8 +43,8 @@ pass it to `fmt.Println`.
 fmt.Println(peter.Get(s))
 ```
 
-Run the [source][source] above with `-trimpath` and you should see an
-educational message about this Peter Rabbit fellow.
+Run the [source][source] above and you should see an educational message about
+this Peter Rabbit fellow.
 
 ## Exercises
 
@@ -52,4 +52,11 @@ educational message about this Peter Rabbit fellow.
 * Add another method to the `bunny` type. Retrieve `peter` from the store and
   call this new method.
 
+---
+
+[Previous][previous] | [Next][next] | [Home][home]
+
+[previous]: ./updating-data.md
+[next]: ./formatting-stores.md
+[home]: ../README.md
 [source]: storing-custom-data/main.go
