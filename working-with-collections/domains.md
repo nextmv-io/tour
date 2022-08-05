@@ -11,7 +11,7 @@ ones. They are also, conveniently, immutable.
 Nextmv's SDK provides two domain types: `model.Domain` and `store.Domain`.
 `model.Domain` is just an integer domain, unattached to a store. `store.Domain`
 has many of the same methods but with similar mechanics to `store.Slice` and
-`store.Map`. Thus `model.Domain` is the underlying type for `store.Domain`,
+`store.Map`. Thus, `model.Domain` is the underlying type for `store.Domain`,
 which must be associated with a store.
 
 Let's create a few domains to see how they work.
