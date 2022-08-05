@@ -21,28 +21,30 @@ $ go1.18.3 version
 go version go1.18.3 darwin/amd64
 ```
 
-You also need the following shared object files for your architecture and
-operating system from Nextmv. If not already installed, follow the instructions
-[here](https://docs.nextmv.io/cli/installation) to install and configure
-Nextmv's cli tool. Once you have successfully configured your api key, run
-`nextmv sdk get` to download the shared object files to `~/.nextmv/lib`. Add a
-`NEXTMV_LIBRARY_PATH` environment variable pointing to them. Your setup should
-look something like this.
+You also need Nextmv's CLI tool. _You must have access to a private beta for
+this feature. Contact [support][support] for more information_.
+
+If not already installed and configured, follow the instructions
+[here][cli-install]. The full reference for the Nextmv CLI can be found
+[here][cli-reference].
+
+Once you have successfully configured your API key, run `nextmv sdk get` to
+download the necessary files. Your setup should look something like this.
 
 ```bash
 $ nextmv sdk get
 successfully installed sdk files
-
-$ ls ~/.nextmv/lib
-nextmv-run-cli-v0.16.0-dev.0-4-go1.18.3-darwin-amd64.so        
-nextmv-sdk-v0.16.0-dev.0-4-go1.18.3-darwin-amd64.so
-nextmv-run-http-v0.16.0-dev.0-4-go1.18.3-darwin-amd64.so
-
-$ export NEXTMV_LIBRARY_PATH=~/.nextmv/lib
-
-$ echo $NEXTMV_LIBRARY_PATH
-~/.nextmv/lib
 ```
 
+---
+
+[Previous][previous] | [Next][next] | [Home][home]
+
+[previous]: ../README.md
+[next]: ./taking-the-tour.md
+[home]: ../README.md
 [download]: https://go.dev/dl/
 [manage]:   https://go.dev/doc/manage-install
+[cli-install]: https://cloud.nextmv.io/cli
+[cli-reference]: https://docs.nextmv.io/cli/get-started
+[support]: https://nextmv.io/contact

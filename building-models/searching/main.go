@@ -21,33 +21,28 @@ func handler(n int, opt store.Options) (store.Solver, error) {
 	unused := store.NewDomain(root, model.NewRange(1, n))
 	permutation := store.NewSlice[int](root)
 
-	root = root.Generate(
-		store.Scope(
-			func(s store.Store) store.Generator {
-				values := unused.Slice(s)
-
-				return store.If(
-					func(_ store.Store) bool {
-						return len(values) > 0
-					},
-				).Then(
-					func(_ store.Store) store.Store {
-						next := values[0]
-						values = values[1:]
-
-						return s.Apply(
-							unused.Remove(next),
-							permutation.Append(next),
-						)
-					},
-				).With(unused.Empty)
+	root = root.
+		Validate(unused.Empty).
+		Format(
+			func(s store.Store) any {
+				return permutation.Slice(s)
 			},
-		),
-	).Format(
-		func(s store.Store) any {
-			return permutation.Slice(s)
-		},
-	)
+		).
+		Generate(func(s store.Store) store.Generator {
+			values := unused.Slice(s)
+			return store.Lazy(
+				func() bool { return len(values) > 0 },
+				func() store.Store {
+					next := values[0]
+					values = values[1:]
+
+					return s.Apply(
+						unused.Remove(next),
+						permutation.Append(next),
+					)
+				},
+			)
+		})
 
 	return root.Satisfier(opt), nil
 }

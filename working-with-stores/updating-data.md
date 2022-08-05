@@ -22,8 +22,8 @@ block inherits `x = 42` from the outer block which contains it, overrides
 `y = "bar"`, and adds a new variable `pi = 3.14`. Assignments in the inner
 block do not impact the outer block.
 
-Let's code this example up using Hop. First we define a store `s1` and add `x`
-and `y` to it.
+Let's code this example up. First we define a store `s1` and add `x` and `y` to
+it.
 
 ```go
 s1 := store.New()
@@ -31,7 +31,7 @@ x := store.NewVar(s1, 42)
 y := store.NewVar(s1, "foo")
 ```
 
-Now we apply a change set to `s1`. This results in a new store, `s2`. `s2` is
+Now we apply a changeset to `s1`. This results in a new store, `s2`. `s2` is
 functionally a copy of `s1` with a new value associated with `y` and a new
 variable, `pi`.
 
@@ -47,8 +47,7 @@ fmt.Println("s1:", x.Get(s1), y.Get(s1))
 fmt.Println("s2:", x.Get(s2), y.Get(s2), pi.Get(s2))
 ```
 
-Run the [source][source] above with `-trimpath` and you should see output
-similar to this.
+And run the [source][source] above you should see output similar to this.
 
 ```txt
 s1: 42 foo
@@ -76,4 +75,11 @@ s1.Apply(
 * Try to store a slice on `s1` then `append` to it when applying changes to
   create both `s2` and `s3`. What do you expect to happen? What happens?
 
+---
+
+[Previous][previous] | [Next][next] | [Home][home]
+
+[previous]: ./creating-stores.md
+[next]: ./storing-custom-data.md
+[home]: ../README.md
 [source]: updating-data/main.go

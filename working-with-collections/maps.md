@@ -1,9 +1,9 @@
 # ![ears](../img/ears.png) Maps
 
-Just like Hop provides an immutable slice type and various methods for creating
-new slices from existing ones, it also provides a map collection. Like slices,
-maps can store any type of value. However, they only allow either `int` or
-`string` keys.
+Just like stores provide an immutable slice type and various methods for
+creating new slices from existing ones, it also provides a map collection. Like
+slices, maps can store any type of value. However, they only allow either `int`
+or `string` keys.
 
 A map is initialized empty and therefore requires its key and value types.
 
@@ -44,4 +44,11 @@ fmt.Println(x.Map(s3))
 * Create a map with `int` keys and values of a custom type. Set values on the
   map and retrieve its underlying representation.
 
+---
+
+[Previous][previous] | [Next][next] | [Home][home]
+
+[previous]: ./slices.md
+[next]: ./domains.md
+[home]: ../README.md
 [source]: maps/main.go

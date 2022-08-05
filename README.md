@@ -24,7 +24,7 @@ Hop.
 ```
 
 Nextmv's decision modeling SDK lets you automate any operational decision in a
-way that looks and feels like writing other code. Hop provides the guardrails to
+way that looks and feels like writing other code. It provides the guardrails to
 turn your data into automated decisions, and test and deploy them into
 production environments.
 
@@ -52,4 +52,3 @@ Let's see how.
 
 - [Input and Output](building-models/input-and-output.md)
 - [Searching](building-models/searching.md)
-- [Sudoku](building-models/sudoku.md)

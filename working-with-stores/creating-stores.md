@@ -1,8 +1,6 @@
 # ![ears](../img/ears.png) Creating Stores
 
-[home](../README.md)
-
-To start, let's import the `hop/store` subpackage of Nextmv's SDK and create a
+To start, let's import the `store` subpackage of Nextmv's SDK and create a
 `main` stub.
 
 ```go
@@ -48,16 +46,16 @@ fmt.Println(
 Let's put this together and try it. Save the [full source][source] to a file
 called `main.go` inside its own directory under `tour/`. For example,
 `working-with-stores/creating-stores/main.go` works nicely. Run it using
-`go run -trimpath`. You should see output like this.
+`nextmv sdk run`. You should see output like this.
 
 ```bash
-tour$ go run -trimpath storing-data/create-a-store/main.go
+tour$ nextmv sdk run storing-data/create-a-store/main.go
 420 3.14
 ```
 
-In future examples, we'll leave out those steps. You can save the files wherever
-you like under the `tour/` folder, so long as there is only one `func main` in
-any subfolder.
+In future examples, we'll leave out those steps. You can save the files
+wherever you like under the `tour/` folder, so long as there is only one `func
+main()` in any subfolder.
 
 ## Exercises
 
@@ -65,4 +63,11 @@ any subfolder.
 * Create a seconds store and add variables to it.
 * What happens when you retrieve a value from the wrong store?
 
+---
+
+[Previous][previous] | [Next][next] | [Home][home]
+
+[previous]: ../getting-started/taking-the-tour.md
+[next]: ./updating-data.md
+[home]: ../README.md
 [source]: creating-stores/main.go
