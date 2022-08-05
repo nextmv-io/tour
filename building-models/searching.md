@@ -57,7 +57,7 @@ root = root.Format(func(s store.Store) any { return permutation.Slice(s) })
 
 From an existing parent store, we must define the rules to generate child
 stores. We can do so through an `Eager` or `Lazy` generator. In the following
-code snippet, we lazily generate new children stores by getting the values that
+code snippet, we lazily generate new child stores by getting the values that
 haven't been used for a parent store. For each unused value, we append it to
 our permutations and remove it from the unused domain.
 
