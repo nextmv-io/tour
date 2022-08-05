@@ -128,7 +128,7 @@ Successfully generated the shift-scheduling template.
 
 ## Exercises
 
-* Run the turorial for different values of `n`, such as 4.
+* Run the tutorial for different values of `n`, such as 4.
 * Implement this tutorial using an `Eager` generator.
 * Use `Value` and `Minimizer` to look for the permutation that has the smallest
   absolute distance between its numbers, i.e.: the permutation `[1,3,4,2]` has
