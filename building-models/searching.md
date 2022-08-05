@@ -114,7 +114,7 @@ $ echo 3 |\
 [3,2,1]
 ```
 
-Use the Nextmv cli to look at complete examples of more advanced search
+Use the Nextmv CLI to look at complete examples of more advanced search
 problems:
 
 ```bash

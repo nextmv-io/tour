@@ -32,7 +32,7 @@ func main() {
 ```
 
 Most decision models begin with a call to `run.Run` in a `main` function.
-`run.Run` requires a handler. A handler reads data _of any JSON-unmarshalable
+`run.Run` requires a handler. A handler reads data _of any JSON-unmarshable
 type_, pulls solver options out of the environment or command line, and
 constructs a solver. The runner unmarshals the input for you and knows what to
 do with the solver.
