@@ -1,6 +1,6 @@
 # ![ears](img/ears.png) Hoppity
 
-A tour of data store modeling with Hop and Nextmv's SDK.
+A tour of data store modeling with Nextmv's SDK.
 
 ```txt
 Christopher Robin goes
