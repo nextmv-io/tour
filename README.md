@@ -1,3 +1,8 @@
+# 🚨 WARNING - THIS REPOSITORY HAS BEEN ARCHIVED 🚨
+
+Please go to <https://docs.nextmv.io> for the full documentation of the Nextmv
+platform.
+
 # ![ears](img/ears.png) Hoppity
 
 A tour of data store modeling with Nextmv's SDK.
